@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автошкола Астра - Ваш путь к безопасному вождению</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+
+            <div class="nav-links">
+                <a href="index.html" class="active">Главная</a>
+                <a href="pages/about.html">О нас</a>
+                <a href="pages/education.html">Обучение</a>
+                <a href="pages/prices.html">Цены</a>
+                <a href="pages/info.html">Сведения</a>
+                <a href="pages/reviews.html">Отзывы</a>
+            </div>
+            <div class="contact-info">
+                <a href="tel:+74812566200" class="phone">+7 (4812) 566-200</a>
+                <button class="callback-btn">Перезвоните мне</button>
+            </div>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <div class="hero-logo">
+                    <img src="images/logo.png" alt="Автошкола АСТРА">
+                </div>
+                <div class="hero-content">
+                    <h1>АВТОШКОЛА НОВОГО ПОКОЛЕНИЯ</h1>
+                    <div class="hero-features">
+                        <div class="feature">25 лет опыта</div>
+                        <div class="feature-dot">•</div>
+                        <div class="feature">Современное оборудование</div>
+                        <div class="feature-dot">•</div>
+                        <div class="feature">Профессиональные инструкторы</div>
+                    </div>
+                    <button class="enroll-button" onclick="scrollToForm()">Записаться на обучение</button>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="advantages">
+        <h2>Почему выбирают нас</h2>
+        <div class="advantages-grid">
+            <div class="advantage-card" data-aos="zoom-in">
+                <img src="images/raspolozhenie.png" alt="Расположение" class="advantage-image">
+                <h3>Удобное расположение</h3>
+                <p>На пересечении главных экзаменационных маршрутов ГИБДД</p>
+            </div>
+            <div class="advantage-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/oborudovanie.jpg" alt="Оборудование" class="advantage-image">
+                <h3>Современное оборудование</h3>
+                <p>Оснащенные классы с интерактивными технологиями обучения</p>
+            </div>
+            <div class="advantage-card" data-aos="zoom-in" data-aos-delay="200">
+                <img src="images/insructori.jpg" alt="Инструкторы" class="advantage-image">
+                <h3>Опытные инструкторы</h3>
+                <p>Команда профессионалов с международным опытом</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses">
+        <h2>Программы обучения</h2>
+        <div class="courses-grid">
+            <div class="course-card" data-aos="flip-left">
+                <div class="course-image">
+                    <img src="images/Mehanika.jpg" alt="Механика">
+                </div>
+                <div class="course-content">
+                    <h3>Механическая КПП</h3>
+                    <ul>
+                        <li>139 часов теории</li>
+                        <li>56 часов вождения</li>
+                        <li>Предоставление учебных материалов и литературы</li>
+                        <li>Выбор учебного автомобиля на механике</li>
+                        <li>Предоставление учебного автомобиля на экзамен в ГАИ</li>
+                        <li>Поддержка до и после получения водительского удостоверения</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="course-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="course-image">
+                    <img src="images/avromat.jpg" alt="Автомат">
+                </div>
+                <div class="course-content">
+                    <h3>Автоматическая КПП</h3>
+                    <ul>
+                        <li>139 часов теории</li>
+                        <li>54 часа вождения</li>
+                        <li>Предоставление учебных материалов и литературы</li>
+                        <li>Выбор учебного автомобиля на автомате</li>
+                        <li>Предоставление учебного автомобиля на экзамен в ГАИ</li>
+                        <li>Поддержка до и после получения водительского удостоверения</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="locations">
+        <h2>Наши учебные классы</h2>
+        <div class="locations-container">
+            <div class="location-info">
+                <div class="location-card active" data-location="kiseleva">
+                    <h3>Киселевка</h3>
+                    <p>ул. Рыленкова, 40 (ТЦ "Кривич")</p>
+                    <p>2-ой этаж, каб. 25</p>
+                </div>
+                <div class="location-card" data-location="medgorodok">
+                    <h3>Медгородок</h3>
+                    <p>ул. Крупской, 37</p>
+                    <p>2-ой этаж, каб. 21</p>
+                </div>
+            </div>
+            <div id="map" class="location-map"></div>
+        </div>
+    </section>
+
+    <section class="callback-form" id="enrollment-form">
+        <div class="form-container" data-aos="fade-up">
+            <h2>Записаться на обучение</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Ваше имя</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" required>
+                    <label for="phone">Телефон</label>
+                </div>
+                <div class="form-group">
+                    <select id="time" required>
+                        <option value="">Выберите удобное время</option>
+                        <option value="morning">9:00 - 12:00</option>
+                        <option value="day">12:00 - 16:00</option>
+                        <option value="evening">16:00 - 21:00</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <div class="footer-info-text">
+                    <span>АСТРА</span>
+                </div>
+                <p>Лицензия на образовательную деятельность</p>
+                <p>№ 5089 от 12.10.2015</p>
+            </div>
+            <div class="footer-nav">
+                <h4>Навигация</h4>
+                <a href="index.html">Главная</a>
+                <a href="pages/about.html">О нас</a>
+                <a href="pages/education.html">Обучение</a>
+                <a href="pages/prices.html">Цены</a>
+                <a href="pages/info.html">Сведения</a>
+                <a href="pages/reviews.html">Отзывы</a>
+            </div>
+            <div class="footer-contacts">
+                <h4>Контакты</h4>
+                <a href="tel:+74812566200">+7 (4812) 566-200</a>
+                <a href="tel:+79043616200">+7 (904) 361-62-00</a>
+                <a href="mailto:lorinda1970@mail.ru">lorinda1970@mail.ru</a>
+            </div>
+            <div class="footer-social">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#" class="vk">ВКонтакте</a>
+                    <a href="#" class="telegram">Telegram</a>
+                    <a href="#" class="whatsapp">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Автошкола Астра. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="callbackModal" role="dialog" aria-labelledby="callbackTitle">
+        <div class="modal-content">
+            <span class="close" aria-label="Закрыть">&times;</span>
+            <h2 id="callbackTitle">Заказать обратный звонок</h2>
+            <form id="callbackForm">
+                <div class="form-group">
+                    <input type="text" id="callbackName" required>
+                    <label for="callbackName">Ваше имя</label>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="callbackPhone" required>
+                    <label for="callbackPhone">Телефон</label>
+                </div>
+                <button type="submit" class="submit-btn">Заказать звонок</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
