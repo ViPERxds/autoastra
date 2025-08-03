@@ -1,0 +1,647 @@
+/* Герой секция цен */
+.prices-hero {
+    height: 60vh;
+    position: relative;
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('../images/price.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.prices-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.prices-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.prices-hero-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Секция информации о ценах */
+.price-info {
+    padding: 5rem 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+}
+
+.price-info .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.info-content {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.info-content h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.info-content p {
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.price-formats {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.format-block {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.format-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.format-block h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.format-block ul {
+    list-style: none;
+}
+
+.format-block li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.format-block li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.additional-info {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.additional-info p {
+    margin-bottom: 0.5rem;
+}
+
+.highlight {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+/* Калькулятор цен */
+.price-calculator {
+    padding: 5rem 0;
+}
+
+.price-calculator h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 1rem;
+}
+
+.price-calculator h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+}
+
+.calculator-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.calculator-form {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.option-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.option-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.option-card input[type="radio"] {
+    display: none;
+}
+
+.card-content {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.option-card:hover .card-content {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.option-card input[type="radio"]:checked + .card-content {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.additional-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.service-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.service-card input[type="checkbox"] {
+    display: none;
+}
+
+.service-card .card-content {
+    background: var(--light-gray);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.service-card:hover .card-content {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-card input[type="checkbox"]:checked + .card-content {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.calculator-result {
+    position: sticky;
+    top: 100px;
+}
+
+.result-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.result-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.total-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.price-breakdown {
+    margin-bottom: 2rem;
+}
+
+.breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.enroll-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.enroll-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* Включенные услуги */
+.included-services {
+    padding: 5rem 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+}
+
+.included-services .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.included-services h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: var(--white);
+    padding: 1.8rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.1);
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-item i {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+}
+
+.service-item span {
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.3px;
+    color: var(--primary-color);
+}
+
+/* Скидки */
+.discounts {
+    padding: 5rem 0;
+}
+
+.discounts .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.discounts h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 2.5rem;
+}
+
+.discounts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.discount-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.discount-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.discount-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.discount-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.discount-note {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.discount-note i {
+    color: var(--secondary-color);
+}
+
+/* Секция способов оплаты */
+.payment-methods {
+    padding: 5rem 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+}
+
+.payment-methods .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.payment-methods h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.payment-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.payment-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Секция требований для поступления */
+.requirements {
+    padding: 5rem 0;
+}
+
+.requirements .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.requirements h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--white);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.requirements-list {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.requirements-list ol {
+    list-style-position: inside;
+    padding: 0;
+}
+
+.requirements-list li {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--light-gray);
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.requirements-list li:hover {
+    transform: translateX(10px);
+    background: #f5f5f5;
+}
+
+.enrollment-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.enrollment-info p {
+    margin-bottom: 0.5rem;
+}
+
+/* Медиа запросы */
+@media (max-width: 992px) {
+    .calculator-container {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-result {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .prices-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .option-cards,
+    .additional-services {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-form {
+        padding: 1rem;
+    }
+
+    .form-section {
+        margin-bottom: 1rem;
+    }
+
+    .form-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-content {
+        padding: 1rem;
+    }
+
+    .card-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .result-card {
+        padding: 1rem;
+    }
+
+    .total-price {
+        font-size: 2rem;
+    }
+
+    .breakdown-item {
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .enroll-btn {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .prices-hero {
+        height: 40vh;
+    }
+
+    .format-block {
+        padding: 1rem;
+    }
+
+    .service-item {
+        padding: 1rem;
+    }
+
+    .calculator-form {
+        padding: 0.8rem;
+    }
+
+    .form-section h3 {
+        font-size: 1rem;
+    }
+
+    .card-content {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .card-icon {
+        font-size: 1.3rem;
+    }
+
+    .result-card {
+        padding: 0.8rem;
+    }
+
+    .total-price {
+        font-size: 1.8rem;
+    }
+
+    .breakdown-item {
+        font-size: 0.85rem;
+    }
+
+    .price-calculator h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}

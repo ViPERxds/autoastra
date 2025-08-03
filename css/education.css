@@ -1,0 +1,450 @@
+/* Герой секция */
+.education-hero {
+    height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+
+    background-image: url('../images/obexgenie.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.education-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.education-hero-content {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.education-hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.education-hero-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Информация об обучении */
+.education-info {
+    background: linear-gradient(135deg, #1A4B8C 0%, #2E5DA3 50%, #1A4B8C 100%);
+    padding: 2rem 0;
+    color: var(--white);
+}
+
+.education-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.education-text {
+    text-align: center;
+}
+
+.education-text .highlight {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 1rem;
+    background: rgba(44, 62, 80, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+/* Разделы обучения */
+.education-sections {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.section-card {
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.section-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.section-content p {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.btn-more {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    text-align: center;
+}
+
+.btn-more:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Формы обучения */
+.education-types {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #1A4B8C 0%, #2E5DA3 50%, #1A4B8C 100%);
+    color: var(--white);
+}
+
+.education-types h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.type-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.type-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.type-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Подстраницы */
+.subpage-content {
+    padding: 120px 0 4rem;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.intro-text {
+    margin-bottom: 3rem;
+}
+
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.note {
+    font-style: italic;
+    color: var(--dark-gray);
+    font-size: 0.9rem;
+    padding: 1rem;
+    background: rgba(44, 62, 80, 0.05);
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.info-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-section {
+    display: flex;
+    background: var(--white);
+    border-radius: 15px;
+    padding: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.info-section:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.section-icon {
+    width: 100px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.info-section:hover .section-icon {
+    transform: scale(1.1);
+}
+
+.section-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.info-section h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background: rgba(44, 62, 80, 0.05);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    background: rgba(44, 62, 80, 0.1);
+    transform: translateX(5px);
+}
+
+.feature i {
+    color: var(--primary-color);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.section-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.section-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.section-btn i {
+    transition: transform 0.3s ease;
+}
+
+.section-btn:hover i {
+    transform: translateX(5px);
+}
+
+.download-btn, .preview-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.preview-btn {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.download-btn:hover, .preview-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Медиа запросы */
+@media (max-width: 768px) {
+    .education-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .education-hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .education-content {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .sections-grid,
+    .types-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-section {
+        flex-direction: column;
+    }
+
+    .section-icon {
+        width: 100%;
+        height: 100px;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .download-btn, .preview-btn, .section-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .education-content {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+
+    .education-text p {
+        font-size: 0.9rem;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+    }
+
+    .section-content {
+        padding: 1.5rem;
+    }
+
+    .info-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .feature {
+        padding: 0.75rem;
+    }
+}
